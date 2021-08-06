@@ -1,10 +1,13 @@
 package linksharing
 
 class Subscription {
-    String topic
-    String user
-    Date dateCreated
-
+    Topic subscribedTopic
+    User subscribedUser
+    Date dateCreated=new Date()
+    Subscription.Seriousness visibility
     static constraints = {
+    }
+    enum Seriousness{
+        Serious, VerySerious, Casual
     }
 }

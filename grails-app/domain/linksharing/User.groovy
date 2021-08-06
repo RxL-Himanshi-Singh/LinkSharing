@@ -1,25 +1,30 @@
 package linksharing
 
 class User {
-    String email
-    String userName
-    String password
     String firstName
     String lastName
-    byte photo
-    boolean admin
-    boolean active
-    Date dateCreated
-    Date lastUpdated
+    String userName
+    String email
+    String password
+    byte[] photo
+    Boolean admin
+    Boolean active
+    Date dateCreated= new Date()
+    Date lastUpdated= new Date()
+    transient String repeatPassword
+    static hasMany = [topic:Topic, subscription: Subscription,readingItem: ReadingItem, resources: Resources]
+    static mapping={
+        table 'UserInfo'
 
+    }
     static constraints = {
         email email: true, blank:false,unique: true
         userName blank: false, nullable: false, unique: true
-        password blank: false, nullable: false, unique: true
+        password minSize:5,blank: false, nullable: false
         firstName blank: false, nullable: false
         lastName blank: false, nullable: false
         admin blank: false, nullable: false
-        dateCreated blank: false, nullable: false
-        lastUpdated blank: false, nullable: false
+        photo nullable: true
     }
+
 }

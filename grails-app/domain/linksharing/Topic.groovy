@@ -1,13 +1,17 @@
 package linksharing
 
 class Topic {
-    String name
+    String topicName
     User createdBy
-    Date dateCreated
-    Date lastUpdated
-
-
+    Date dateCreated= new Date()
+    Date lastUpdated= new Date()
+    Topic.Visibility visibility
+    static belongsTo = [user: User]
+    static hasMany = [resources: Resources, subscritpion: Subscription]
     static constraints = {
-        name blank: false, nullable: false, unique: true
+        createdBy nullable: true
+    }
+    enum Visibility{
+        Private, Public
     }
 }

@@ -1,0 +1,194 @@
+* {box-sizing: border-box;}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #212529;
+    position: relative;
+    z-index: 1;
+    background-image: url(img-1.png);
+
+    background-size: cover;
+
+
+}
+
+.content > a{
+    font-weight: bold;
+    font-size: 20px;
+}
+span > a{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;;
+}
+/*star css*/
+div.stars {
+    width: 270px;
+    display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+
+    transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.popbutton{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.popbutton:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#user{
+    padding: 20px;
+    margin: 10px;
+    length:auto;
+    position:relative;
+
+}
+.profilecard{
+    text-align: center;
+    length:auto;
+    margin-left:50px;
+    border-radius: 8px;
+    border: 1px solid black;
+    float:left;
+    width:25%;
+}
+.infouser{
+    text-align: center;
+    overflow: hidden;
+    width: 65%;
+    length:auto;
+    margin-left:25px;
+    float:right;
+    height:auto;
+}
+.cardheader{
+    background: #0f0f0f;
+    height:130px;
+    align-items: center;
+}
+.cardfooter{
+    background:#f0f0f0;
+    margin-top:-25px;
+
+}
+
+.cardheader .pic img{
+    width: 80px;
+    height: 80px;
+    margin-top:10px;
+    border-radius: 50%;
+
+}
+.cards a {
+    float: right;
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
